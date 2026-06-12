@@ -1,0 +1,12 @@
+name: pr-warden
+on:
+  pull_request:
+    types: [opened, edited, synchronize, ready_for_review]
+permissions:
+  pull-requests: write
+  issues: read
+jobs:
+  warden:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mrcord77/pr-warden@master
